@@ -72,10 +72,10 @@ class DetectorAPI:
 
 if __name__ == "__main__":
     # Model taken from https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
-    model_path = r'/home/sam/841project/faster_rcnn_nas_coco_2018_01_28/frozen_inference_graph.pb'
+    model_path = r'/path/to/faster_rcnn_nas_coco_2018_01_28/frozen_inference_graph.pb'
     odapi = DetectorAPI(path_to_ckpt=model_path)
     threshold = 0.4
-    path = os.path.join(r"/home/sam/841project/dev/video_input", sys.argv[1]+'.mp4')
+    path = os.path.join(r"/path/to/video_input", sys.argv[1]+'.mp4')
     cap = cv2.VideoCapture(path)
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)   # float
